@@ -26,5 +26,5 @@ weathermark = requests.get(weathermark_url).text.split('\n')[7].split('>')[1].sp
  
 sign = u'\u02DA'
 
-print "%0.2f%sC %s | %s | %s" % (temp, sign, weathermark, now, later)
-#print "%0.2f%sC %s | %s | %s | %s | %s | %s" % (temp, sign, weathermark, now, later, future, sunrise_time, sunset_time)
+print ("%0.2f%sC %s | %s | %s" % (temp, sign, weathermark, now, later)).encode('utf8', 'replace')
+#print ("%0.2f%sC %s | %s | %s | %s | %s | %s" % (temp, sign, weathermark, now, later, future, sunrise_time, sunset_time)).encode('utf8', 'replace')
